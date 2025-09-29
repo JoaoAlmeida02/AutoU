@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email AI</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div id="modal" class="modal hidden">
+    <div class="modal__card">
+      <h3>PDF carregado</h3>
+      <p>O arquivo foi lido e será processado.</p>
+      <button id="modalClose" class="btn">OK</button>
+    </div>
+  </div>
+  <header class="topbar">
+    <div class="brand">Email AI</div>
+    <nav class="nav">
+      <a href="#" class="nav__link">Início</a>
+      <a href="#" class="nav__link">Sobre</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1>Classificação de Emails com Resposta Automática</h1>
+      <p>Cole o conteúdo do email ou envie um .txt/.pdf. Receba a categoria e uma resposta sugerida.</p>
+    </section>
+    <section class="panel">
+      <form id="form" enctype="multipart/form-data" class="form">
+        <label for="raw_text">Conteúdo do email</label>
+        <textarea id="raw_text" name="raw_text" rows="10" placeholder="Cole aqui..."></textarea>
+        <div class="split">
+          <div class="filebox">
+            <input id="file" type="file" name="file" accept=".txt,.pdf" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary" id="go">Processar</button>
+      </form>
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Processando...</span>
+      </div>
+      <section id="result" class="card hidden">
+        <div class="card__header">
+          <div class="badge" id="badge">Categoria</div>
+          <div class="score">Confiança: <span id="score">0%</span></div>
+        </div>
+        <div class="card__body">
+          <div class="row"><span class="k">Assunto sugerido</span><span class="v" id="subject"></span></div>
+          <div class="row">
+            <span class="k">Resposta sugerida</span>
+          </div>
+          <pre id="reply" class="code"></pre>
+          <div class="actions">
+            <button id="copyBtn" class="btn">Copiar resposta</button>
+          </div>
+        </div>
+        <details id="debug" class="debug hidden"><summary>Debug</summary><pre id="debugContent" class="code"></pre></details>
+      </section>
+    </section>
+  </main>
+  <footer class="footer">Feito com FastAPI + Hugging Face</footer>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
