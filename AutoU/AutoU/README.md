@@ -25,3 +25,6 @@ Acesse http://127.0.0.1:8000/
 - UI envia `file` somente quando realmente existe um arquivo.
 - Backend ignora `file` sem nome e faz parsing resiliente de `return_debug`.
 - Caso a IA não responda, usa heurística local automaticamente.
+
+## Link para youtube
+https://youtu.be/P7UtnKAqwOw
