@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\JoãoGabriel\Downloads\email-ai-vercel-hf-v2\.venv"
+VIRTUAL_ENV="C:\Users\JoãoGabriel\Downloads\AutoU\AutoU\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -1,16 +1,12 @@
-
-# Email AI – FastAPI + Hugging Face (Zero‑Shot) – V2
-
-Correção de envio somente texto pela UI e tratamento de arquivo vazio no backend.
-
 ## Como rodar localmente
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scriptsctivate  |  PowerShell (alternativa): .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# Windows: .venv\ScriptsActivate  |  PowerShell (alternativa): .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 pip install -r requirements.txt
 # PowerShell
 $env:HF_API_TOKEN="seu_token"
+
 # CMD
 #set HF_API_TOKEN=seu_token
 uvicorn main:app --reload
